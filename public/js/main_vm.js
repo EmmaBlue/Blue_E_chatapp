@@ -1,4 +1,6 @@
 import ChatMessage from './modules/ChatMessage.js';
+import ThemeChange from './modules/ThemeChange.js';
+import AlertMessage from './modules/AlertMessage.js';
 
 const socket = io();
 
@@ -7,6 +9,8 @@ function logConnect({socketID, message}){
     console.log(socketID, message);
     //set vue model socketID to one from socket.io
     vm.socketID = socketID;
+    //set vue model alert to be dis/connected message from socket.io
+    vm.alert = message;
 }
 
 function appendMessage(message){
@@ -19,6 +23,7 @@ const vm = new Vue({
     data: {
         socketID: "",
         nickname: "",
+        alert: "",
         message: "",
         messages: []
 
@@ -31,11 +36,24 @@ const vm = new Vue({
 
             // reset the message field
             this.message = "";
+        },
+
+
+
+    },
+    mounted: {
+
+        alertConnect(){
+
+            socket.emit('connected',this.alert);
         }
+
     },
     components: {
 
-        newmessage: ChatMessage
+        newmessage: ChatMessage,
+        themechange: ThemeChange,
+        alertmessage: AlertMessage,
     }
 
 }).$mount(`#app`);
