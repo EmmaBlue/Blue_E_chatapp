@@ -16,6 +16,15 @@ function logConnect({socketID, message}){
 function appendMessage(message){
     //push each message into an array to display each message dynamically
     vm.messages.push(message);
+    vm.alert = message;
+}
+
+function logDisconnect(response){
+
+
+        vm.alert = response.message;
+
+    console.log(response);
 }
 
 // create Vue instance
@@ -39,16 +48,8 @@ const vm = new Vue({
         },
 
 
-
     },
-    mounted: {
 
-        alertConnect(){
-
-            socket.emit('connected',this.alert);
-        }
-
-    },
     components: {
 
         newmessage: ChatMessage,
@@ -60,4 +61,4 @@ const vm = new Vue({
 
 socket.on('connected', logConnect);
 socket.addEventListener('chat message', appendMessage);
-socket.addEventListener('disconnect', appendMessage);
+socket.addEventListener('disconnect', logDisconnect);
