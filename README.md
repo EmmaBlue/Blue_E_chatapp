@@ -17,7 +17,7 @@ To locally host this website, you’ll need Git installed on your computer.
 
 ### Installing
 
-From the command line:
+From the command line:https://github.com/EmmaBlue/Blue_E_chatapp
 
 ```# Initialize git
 
@@ -34,6 +34,11 @@ $ cd Blue_E_chatapp
 # Install relevant node modules
 
 npm install
+
+# Run application 
+
+npm start
+
 
 ```
 
