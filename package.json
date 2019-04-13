@@ -8,13 +8,20 @@
   },
   "author": "Mariah Alderson",
   "license": "ISC",
-  "devDependencies": {},
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-livereload": "^4.0.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.2",
+    "readable-stream": "^3.3.0"
+  },
   "dependencies": {
     "express": "^4.16.4",
     "socket.io": "^2.2.0"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/mariahalderson/Alderson_M_chatApp.git"
+    "url": "git://github.com/mariahalderson/Blue_E_chatApp.git"
   }
 }
