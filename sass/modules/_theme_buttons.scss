@@ -1,0 +1,26 @@
+.themechange-section {
+
+    display:flex;
+
+    .theme-buttons {
+
+        margin-right: 10px;
+        border-radius: 8px;
+        border: 2px solid #bfcfd6;
+        padding: 10px;
+        transition: opacity 0.5s;
+        -webkit-transition: opacity 0.5s;
+
+        h2 {
+
+            font-size: 0.85em;
+
+
+        }
+    }
+
+    .theme-buttons:hover {
+
+       opacity: 0.75;
+    }
+}
