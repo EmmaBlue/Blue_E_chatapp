@@ -10,7 +10,7 @@
 </head>
 <body>
 	<main id="app">
-		<section class="form-container">
+		<section class="form-container pink">
       <label for="nickname">Your Nickname (optional)</label>
       <!-- v-model so vm recognizes this element as nickname-->
 			<input v-model="nickname" type="text" id="nickname" class="nickname" placeholder="What is your nickname?">
@@ -21,8 +21,19 @@
 				<textarea v-model="message" class="message" type="text" autocomplete="off" id="textarea"></textarea>
 				<input id="submit-button" type="submit" @click.prevent="dispatchMessage">
 			</form>
-			<themechange @click.prevent="alertConnect"></themechange>
 			<alertmessage :alrt="alert"></alertmessage>
+			<section class="themechange-section">
+					<!--<h1 class="none">Change Theme</h1>-->
+					<section onclick="changeBlue()" class="theme-buttons">
+						<h2>Blue</h2>
+					</section>
+					<section onclick="changeYellow()" class="theme-buttons">
+						<h2>Yellow</h2>
+					</section>
+					<section onclick="changePink()" class="theme-buttons">
+						<h2> Pink</h2>
+					</section>
+			</section>
 		</section>
 
 		<section class="messages">
@@ -33,5 +44,7 @@
 	</main>
 	<script src="/socket.io/socket.io.js"></script>
 	<script type="module" src="js/main_vm.js"></script>
+	<script  src="js/theme_change.js"></script>
+
 </body>
 </html>

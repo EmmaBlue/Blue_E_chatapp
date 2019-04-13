@@ -1,5 +1,4 @@
 import ChatMessage from './modules/ChatMessage.js';
-import ThemeChange from './modules/ThemeChange.js';
 import AlertMessage from './modules/AlertMessage.js';
 
 const socket = io();
@@ -16,7 +15,7 @@ function logConnect({socketID, message}){
 function appendMessage(message){
     //push each message into an array to display each message dynamically
     vm.messages.push(message);
-    vm.alert = message;
+
 }
 
 function logDisconnect(response){
@@ -53,7 +52,6 @@ const vm = new Vue({
     components: {
 
         newmessage: ChatMessage,
-        themechange: ThemeChange,
         alertmessage: AlertMessage,
     }
 

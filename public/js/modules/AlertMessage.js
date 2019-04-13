@@ -3,11 +3,9 @@ export default {
     props: ['alrt'],
 
     template: `
-        <!--<p class="new-message" :class="{'my-message' : matchedID}">
-                <span>{{msg.message.name}} says:</span>
-                {{msg.message.content}}
-        </p>-->
-        <p>{{alrt}}</p>
+        <section id="alert-container">
+            <p id="alert">{{alrt}}</p>
+        </section>
     `,
     data: function() {
         return {

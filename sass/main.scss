@@ -16,9 +16,23 @@ main {
 .form-container {
 	flex: 1;
 	border: 6px solid #bfcfd6;
-	background-color: #9B4F96 ;
 
 	label { display: block; margin-bottom: 0.5rem; }
+}
+
+.pink {
+
+	background-color: #9B4F96 ;
+}
+
+.blue {
+
+	background-color: #55cdfc;
+}
+
+.yellow {
+
+	background-color: #FFDA00;
 }
 
 .messages {
@@ -81,3 +95,5 @@ form {
 // imports
 
 @import 'modules/_message';
+@import 'modules/_theme_buttons';
+@import 'modules/_alert';
